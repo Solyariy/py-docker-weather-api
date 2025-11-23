@@ -1,11 +1,11 @@
 FROM python:3.10.8-alpine
 LABEL authors="solal"
 
-ENV PYTHOUNNBUFFERED=1
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR src/
 
-COPY docker-requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . .
